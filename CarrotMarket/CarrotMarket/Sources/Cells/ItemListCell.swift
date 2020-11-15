@@ -29,6 +29,8 @@ class ItemListCell: UITableViewCell {
     }
 
     func setCell(item: Item) {
+        
+        itemImageView.layer.cornerRadius = 5
         itemImageView.image = item.makeItemImage()
         titleLabel.text = item.title
         locationLabel.text = item.location

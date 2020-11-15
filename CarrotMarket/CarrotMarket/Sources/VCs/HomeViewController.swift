@@ -9,8 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var topView: UIView!
     @IBOutlet var homeCollectionView: UICollectionView!
-    //    @IBOutlet var itemTableView: UITableView!
+
     
 
     override func viewDidLoad() {
@@ -71,3 +72,5 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 
 }
+
+
