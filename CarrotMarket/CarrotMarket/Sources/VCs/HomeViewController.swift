@@ -9,7 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var rootView: UIView!
     @IBOutlet var topView: UIView!
+    @IBOutlet var topViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var homeCollectionView: UICollectionView!
 
     
@@ -73,4 +75,21 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 }
 
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.topViewHeightConstraint.constant = 62
+            self.rootView.layoutIfNeeded()
+        })
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if (decelerate) {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.topViewHeightConstraint.constant = 0
+                self.rootView.layoutIfNeeded()
+            })
+        }
+    }
+}
 
