@@ -16,29 +16,73 @@ class ItemDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        itemDetailTableView.dataSource = self
     }
+    
     
 
 }
-//extension setCell
 extension ItemDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 6 //item.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ImageDetailCell.identifier) as? ImageDetailCell else { return UITableViewCell() }
-        cell.setCell() //rank: indexPath.row,
-        return cell
+        
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: itemDetailImageCell.identifier) as? itemDetailImageCell else {
+                return UITableViewCell()
+            }
+            cell.setCell()
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableCell.identifier) as? ProfileTableCell else {
+                return UITableViewCell()
+            }
+//            cell.setCell()
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: bodyTableCell.identifier) as? bodyTableCell else {
+                return UITableViewCell()
+            }
+//            cell.setCell()
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ReportTableCell.identifier) as? ReportTableCell else {
+                return UITableViewCell()
+            }
+//            cell.setCell()
+            return cell
+            
+        default:
+            break
+        }
+        
+        return UITableViewCell()
     }
 }
 
-extension ItemDetailVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
-        if let nextVC = self.storyboard?.instantiateViewController(identifier: "ImageDetailCell") as? ImageDetailCell {
-            nextVC.item = item
-//            self.navigationController?.pushViewController(nextVC, animated: true)
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+//extension setCell
+//extension ItemDetailVC: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: ImageDetailCell.identifier) as? ImageDetailCell else { return UITableViewCell() }
+//        cell.setCell() //rank: indexPath.row,
+//        return cell
+//    }
+//}
+//

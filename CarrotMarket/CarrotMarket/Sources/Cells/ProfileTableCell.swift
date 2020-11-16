@@ -1,16 +1,15 @@
 //
-//  itemDetailTableCell.swift
+//  ProfileTableCell.swift
 //  CarrotMarket
 //
-//  Created by ✨EUGENE✨ on 2020/11/09.
+//  Created by ✨EUGENE✨ on 2020/11/16.
 //
 
 import UIKit
 
-class itemDetailTableCell: UITableViewCell {
+class ProfileTableCell: UITableViewCell {
 
-    static let identifier = "itemDetailTableCell"
-    
+    static let identifier = "ProfileTableCell"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
