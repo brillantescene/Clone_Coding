@@ -41,16 +41,6 @@ class TabBarController: UITabBarController {
         locals.tabBarItem.image = UIImage(systemName: "newspaper")
         locals.tabBarItem.selectedImage = UIImage(systemName: "newspaper.fill")
         
-        //3
-//        let Profile = UIStoryboard.init(name: "Profile", bundle: nil)
-//        guard let thirdTab = Profile.instantiateViewController(identifier: "ProfileVC")
-//            as? ProfileVC  else {
-//                return
-//        }
-//
-//        thirdTab.tabBarItem.image = UIImage(named: "tabbarIconProfileUnselected")
-//        thirdTab.tabBarItem.selectedImage = UIImage(named: "tabbarIconProfileSelected")
-  
         
         let tabs =  [home, locals]//, secondTab, thirdTab]
         

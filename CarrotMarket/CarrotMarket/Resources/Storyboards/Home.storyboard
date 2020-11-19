@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RJ4-VU-taC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -151,6 +151,7 @@
                                             <outlet property="priceLabel" destination="Epp-fc-cJb" id="Lca-b5-cpQ"/>
                                             <outlet property="timeLabel" destination="8Rl-I7-B0x" id="zw9-I1-QbB"/>
                                             <outlet property="titleLabel" destination="n38-pb-9ED" id="mPZ-Dd-Z9k"/>
+                                            <segue destination="RJ4-VU-taC" kind="show" id="w9l-rq-qno"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -487,6 +488,7 @@
                             <constraint firstItem="p33-ix-pKP" firstAttribute="top" secondItem="ucf-Pd-hpv" secondAttribute="top" id="vHy-6N-pz4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8Ln-qk-Xq6"/>
                     <connections>
                         <outlet property="itemDetailTableView" destination="p33-ix-pKP" id="nkQ-8y-YB8"/>
                     </connections>
@@ -495,10 +497,10 @@
             </objects>
             <point key="canvasLocation" x="3263.1999999999998" y="79.802955665024641"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home NavigationVC-->
         <scene sceneID="FA1-zk-bCQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="unw-Q8-7LH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="unw-Q8-7LH" customClass="HomeNavigationVC" customModule="CarrotMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8HU-Fw-TAZ">
                         <autoresizingMask key="autoresizingMask"/>

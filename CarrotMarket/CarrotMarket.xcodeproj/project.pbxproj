@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0ACC782566784D007E0547 /* HomeNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0ACC772566784D007E0547 /* HomeNavigationVC.swift */; };
 		6B311107254D43D500F725E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B311106254D43D500F725E0 /* AppDelegate.swift */; };
 		6B311109254D43D500F725E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B311108254D43D500F725E0 /* SceneDelegate.swift */; };
 		6B31110B254D43D500F725E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B31110A254D43D500F725E0 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0ACC772566784D007E0547 /* HomeNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationVC.swift; sourceTree = "<group>"; };
 		6B311103254D43D500F725E0 /* CarrotMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B311106254D43D500F725E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B311108254D43D500F725E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				6BAB994E254ED17B00804861 /* TableViewVC.swift */,
 				6BC62B4525590C3200342A85 /* ItemDetailVC.swift */,
 				6BC836A42560F35600C2A3ED /* LocalsVC.swift */,
+				6B0ACC772566784D007E0547 /* HomeNavigationVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				6BC836BD2562906100C2A3ED /* ReportTableCell.swift in Sources */,
 				6B31110B254D43D500F725E0 /* ViewController.swift in Sources */,
 				6BDFC6042557BC6900CE5CB9 /* HomeCollectionCell.swift in Sources */,
+				6B0ACC782566784D007E0547 /* HomeNavigationVC.swift in Sources */,
 				6BC836B425627E1000C2A3ED /* imageDetailCollectionCell.swift in Sources */,
 				6BDFC6012557999000CE5CB9 /* TabBarController.swift in Sources */,
 				6BC836BA25628E7900C2A3ED /* bodyTableCell.swift in Sources */,

@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         plusButton.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
 
+    
     func setItemData() {
         items.append(contentsOf: [
             Item(title: "Lovesick Girls", location: "일산서구 송포동", time: "방금 전", price: "70,000원", itemImageName: "blackpink"),
@@ -56,18 +57,9 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         
-        
-        let dVC = self.presentingViewController as? UITabBarController
-        dVC?.selectedIndex = 0
-        
-//        guard let homeVC = dVC?.selectedViewController as? HomeVC else { return }
-//        homeVC.part = self.partTextfield.text
-//        homeVC.name = self.nameTextfield.text
-//        self.presentingViewController?.dismiss(animated: true)
-        
-        
         let selectItem = items[indexPath.row]
-        if let nextVC = dVC?.storyboard?.instantiateViewController(identifier: "ItemDetailVC") as? ItemDetailVC {
+        
+        if let nextVC = self.storyboard?.instantiateViewController(identifier: "ItemDetailVC") as? ItemDetailVC {
             nextVC.item = selectItem
             self.navigationController?.pushViewController(nextVC, animated: true)
         }
