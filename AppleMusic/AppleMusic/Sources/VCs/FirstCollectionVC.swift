@@ -1,5 +1,5 @@
 //
-//  NewViewController.swift
+//  FirstCollectionVC.swift
 //  AppleMusic
 //
 //  Created by ✨EUGENE✨ on 2020/11/23.
@@ -7,8 +7,9 @@
 
 import UIKit
 
-class NewViewController: UIViewController {
-
+class FirstCollectionVC: UIViewController {
+ 
+    static let identifier = "FirstCollectionVC"
     override func viewDidLoad() {
         super.viewDidLoad()
 

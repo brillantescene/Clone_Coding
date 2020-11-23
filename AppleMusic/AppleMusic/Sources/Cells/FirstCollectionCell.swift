@@ -11,9 +11,5 @@ class FirstCollectionCell: UICollectionViewCell {
     static let identifier = "FirstCollectionCell"
     @IBOutlet var cellTitleLabel: UILabel!
     
-    @IBAction func touchUpNewPage(_ sender: Any) {
-        guard let dvc = storyboard. else {
-            
-        }
-    }
+
 }

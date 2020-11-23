@@ -24,6 +24,8 @@ class LATableCell1: UITableViewCell {
     
     let lineSpacing: CGFloat = 30
     
+    var didSelectItemAction: ((IndexPath) -> Void)?
+    
     func setCell() {
         FirstCollectionView.dataSource = self
         FirstCollectionView.delegate = self
@@ -69,3 +71,21 @@ extension LATableCell1: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) }
 }
+
+//extension TableViewTestVC: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectMusic = musicRank[indexPath.row]
+//        let storyboard = UIStoryboard(name: "MusicInfo", bundle: nil)
+//
+//        if let nextVC = storyboard.instantiateViewController(identifier: "MusicInfoVC") as? MusicInfoVC {
+//            nextVC.music = selectMusic
+//            self.navigationController?.pushViewController(nextVC, animated: true)
+//        }
+//    }
+//}
+extension LATableCell1: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectItemAction?(indexPath)
+    }
+}
+
