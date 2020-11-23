@@ -151,7 +151,6 @@
                                             <outlet property="priceLabel" destination="Epp-fc-cJb" id="Lca-b5-cpQ"/>
                                             <outlet property="timeLabel" destination="8Rl-I7-B0x" id="zw9-I1-QbB"/>
                                             <outlet property="titleLabel" destination="n38-pb-9ED" id="mPZ-Dd-Z9k"/>
-                                            <segue destination="RJ4-VU-taC" kind="show" id="w9l-rq-qno"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

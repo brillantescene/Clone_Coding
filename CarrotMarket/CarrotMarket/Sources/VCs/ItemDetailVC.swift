@@ -19,7 +19,9 @@ class ItemDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         itemDetailTableView.dataSource = self
+    
     }
+    
     
     
 
