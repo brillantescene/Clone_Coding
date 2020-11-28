@@ -9,7 +9,7 @@ import UIKit
 
 class FirstCollectionCell: UICollectionViewCell {
     static let identifier = "FirstCollectionCell"
-    @IBOutlet var cellTitleLabel: UILabel!
+//    @IBOutlet var cellTitleLabel: UILabel!
     
 
 }

@@ -19,7 +19,8 @@ class LookAroundVC: UIViewController {
 }
 extension LookAroundVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
+
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,6 +64,13 @@ extension LookAroundVC: UITableViewDataSource {
 //
 //            cell.setCell()
 //            return cell
+        
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell2.identifier) as? LATableCell2 else {
+                return UITableViewCell()
+            }
+            cell.setCell()
+            return cell
             
         default:
             return UITableViewCell()

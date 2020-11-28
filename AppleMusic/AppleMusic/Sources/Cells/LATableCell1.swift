@@ -44,7 +44,7 @@ class LATableCell1: UITableViewCell {
 }
 extension LATableCell1: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 13
+        return 11
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,20 +72,10 @@ extension LATableCell1: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: horizonInset, bottom: 0, right: horizonInset) }
 }
 
-//extension TableViewTestVC: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectMusic = musicRank[indexPath.row]
-//        let storyboard = UIStoryboard(name: "MusicInfo", bundle: nil)
-//
-//        if let nextVC = storyboard.instantiateViewController(identifier: "MusicInfoVC") as? MusicInfoVC {
-//            nextVC.music = selectMusic
-//            self.navigationController?.pushViewController(nextVC, animated: true)
-//        }
+
+//extension LATableCell1: UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        didSelectItemAction?(indexPath)
 //    }
 //}
-extension LATableCell1: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectItemAction?(indexPath)
-    }
-}
 
