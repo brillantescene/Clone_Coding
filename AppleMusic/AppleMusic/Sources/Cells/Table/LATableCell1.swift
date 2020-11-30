@@ -14,22 +14,23 @@ class LATableCell1: UITableViewCell {
     @IBOutlet var FirstCollectionView: UICollectionView!
     //    @IBOutlet var cellTitleLabel: UILabel!
     
-    let topInset: CGFloat = 23
-    let bottomInset: CGFloat = 21
     let itemSpacing: CGFloat = 8
-    
+        
     let horizonInset: CGFloat = 24
-    
     let rightSpacing: CGFloat = 24
-    
     let lineSpacing: CGFloat = 10
-    
-    var didSelectItemAction: ((IndexPath) -> Void)?
-    
+
     func setCell() {
+        let collectionViewCellNib = UINib(nibName: "MainCVCell", bundle: nil)
+        FirstCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: "MainCVCell")
         FirstCollectionView.dataSource = self
         FirstCollectionView.delegate = self
     }
+
+    
+    var didSelectItemAction: ((IndexPath) -> Void)?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,11 +45,11 @@ class LATableCell1: UITableViewCell {
 }
 extension LATableCell1: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return 9
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FirstCollectionCell.identifier, for: indexPath) as? FirstCollectionCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCVCell.identifier, for: indexPath) as? MainCVCell else {
             return UICollectionViewCell()
         }
         return cell
@@ -59,8 +60,8 @@ extension LATableCell1: UICollectionViewDataSource {
 
 extension LATableCell1: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = (collectionView.frame.height)// - topInset - bottomInset)
-        let cellWidth = (collectionView.frame.width - lineSpacing - rightSpacing)/1.05
+        let cellHeight = collectionView.frame.height
+        let cellWidth = (collectionView.frame.width - horizonInset - rightSpacing) // 2 - 5
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
@@ -71,11 +72,3 @@ extension LATableCell1: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: horizonInset, bottom: 0, right: horizonInset) }
 }
-
-
-//extension LATableCell1: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        didSelectItemAction?(indexPath)
-//    }
-//}
-
