@@ -24,6 +24,8 @@ class LATableCell2: UITableViewCell {
     let lineSpacing: CGFloat = 10
     
     func setCell() {
+        let collectionViewCellNib = UINib(nibName: "SquareCVCell", bundle: nil)
+        secondCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: "SquareCVCell")
         secondCollectionView.dataSource = self
         secondCollectionView.delegate = self
     }
@@ -45,7 +47,7 @@ extension LATableCell2: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SecondCollectionCell.identifier, for: indexPath) as? SecondCollectionCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SquareCVCell.identifier, for: indexPath) as? SquareCVCell else {
             return UICollectionViewCell()
         }
         return cell
