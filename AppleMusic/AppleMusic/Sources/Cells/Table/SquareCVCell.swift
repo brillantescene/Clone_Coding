@@ -23,4 +23,9 @@ class SquareCVCell: UICollectionViewCell {
     func setImage(name: String){
         albumImageView.image = UIImage(named: name)
     }
+    
+    func setText(title: Int, sub: Int){
+        titleLabel.font = UIFont(name: "AppleSDGothicNeo-Light", size: CGFloat(title))
+        subTitleLabel.font = UIFont(name: "AppleSDGothicNeo-Light", size: CGFloat(sub))
+    }
 }
