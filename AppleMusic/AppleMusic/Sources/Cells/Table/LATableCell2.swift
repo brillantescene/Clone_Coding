@@ -13,14 +13,11 @@ class LATableCell2: UITableViewCell {
     
     @IBOutlet var secondCollectionView: UICollectionView!
     
-    let topInset: CGFloat = 23
-    let bottomInset: CGFloat = 21
+
     let itemSpacing: CGFloat = 8
     
     let horizonInset: CGFloat = 24
-    
     let rightSpacing: CGFloat = 24
-    
     let lineSpacing: CGFloat = 10
     
     func setCell() {
@@ -58,8 +55,8 @@ extension LATableCell2: UICollectionViewDataSource {
 
 extension LATableCell2: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellHeight = (collectionView.frame.height)// - topInset - bottomInset)
-        let cellWidth = (collectionView.frame.width)// - horizonInset - rightSpacing)/2 - 5
+        let cellHeight = collectionView.frame.height
+        let cellWidth = (collectionView.frame.width - horizonInset - rightSpacing) / 2 - 5
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
