@@ -93,7 +93,7 @@ extension LookAroundVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell6.identifier) as? LATableCell6 else {
                 return UITableViewCell()
             }
-//            cell.setCell()
+            cell.setCell()
             return cell
         case 7:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell7.identifier) as? LATableCell7 else {
