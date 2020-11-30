@@ -17,7 +17,10 @@ class SquareCVCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         albumImageView.layer.cornerRadius = 4
+    
     }
 
-//    func setCell
+    func setImage(name: String){
+        albumImageView.image = UIImage(named: name)
+    }
 }
