@@ -57,7 +57,7 @@ extension LATableCell2: UICollectionViewDataSource {
 extension LATableCell2: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellHeight = (collectionView.frame.height)// - topInset - bottomInset)
-        let cellWidth = (collectionView.frame.width - lineSpacing - rightSpacing)/1.05
+        let cellWidth = (collectionView.frame.width)// - horizonInset - rightSpacing)/2 - 5
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

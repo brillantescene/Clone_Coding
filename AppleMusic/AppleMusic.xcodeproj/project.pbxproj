@@ -16,6 +16,8 @@
 		6BC466DD257357E00010F5A3 /* LATableCell7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC466DC257357E00010F5A3 /* LATableCell7.swift */; };
 		6BC466E0257357EA0010F5A3 /* LATableCell8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC466DF257357EA0010F5A3 /* LATableCell8.swift */; };
 		6BC466E3257357F70010F5A3 /* LATableCell9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC466E2257357F70010F5A3 /* LATableCell9.swift */; };
+		6BC466E725735C8D0010F5A3 /* SquareCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC466E525735C8D0010F5A3 /* SquareCVCell.swift */; };
+		6BC466E825735C8D0010F5A3 /* SquareCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC466E625735C8D0010F5A3 /* SquareCVCell.xib */; };
 		6BCE8C11256B879200461445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE8C10256B879200461445 /* AppDelegate.swift */; };
 		6BCE8C13256B879200461445 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE8C12256B879200461445 /* SceneDelegate.swift */; };
 		6BCE8C15256B879200461445 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE8C14256B879200461445 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		6BC466DC257357E00010F5A3 /* LATableCell7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATableCell7.swift; sourceTree = "<group>"; };
 		6BC466DF257357EA0010F5A3 /* LATableCell8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATableCell8.swift; sourceTree = "<group>"; };
 		6BC466E2257357F70010F5A3 /* LATableCell9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LATableCell9.swift; sourceTree = "<group>"; };
+		6BC466E525735C8D0010F5A3 /* SquareCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SquareCVCell.swift; path = AppleMusic/Sources/Cells/Table/SquareCVCell.swift; sourceTree = SOURCE_ROOT; };
+		6BC466E625735C8D0010F5A3 /* SquareCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SquareCVCell.xib; path = AppleMusic/Sources/Cells/Table/SquareCVCell.xib; sourceTree = SOURCE_ROOT; };
 		6BCE8C0D256B879200461445 /* AppleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCE8C10256B879200461445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BCE8C12256B879200461445 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		6B4A1EB9257293B500E51F15 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				6BC466E525735C8D0010F5A3 /* SquareCVCell.swift */,
+				6BC466E625735C8D0010F5A3 /* SquareCVCell.xib */,
 				6B59C4DF257142A80078448B /* SecondCollectionCell.swift */,
 				6BCE8C37256B94F300461445 /* FirstCollectionCell.swift */,
 			);
@@ -232,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCE8C1D256B879300461445 /* LaunchScreen.storyboard in Resources */,
+				6BC466E825735C8D0010F5A3 /* SquareCVCell.xib in Resources */,
 				6BCE8C1A256B879300461445 /* Assets.xcassets in Resources */,
 				6BCE8C2A256B89F900461445 /* LookAround.storyboard in Resources */,
 				6BCE8C41256BFF4D00461445 /* FirstCollection.storyboard in Resources */,
@@ -255,6 +262,7 @@
 				6BCE8C32256B8B5E00461445 /* LATableTitleCell.swift in Sources */,
 				6BCE8C15256B879200461445 /* ViewController.swift in Sources */,
 				6BCE8C35256B937800461445 /* LATableCell1.swift in Sources */,
+				6BC466E725735C8D0010F5A3 /* SquareCVCell.swift in Sources */,
 				6BCE8C11256B879200461445 /* AppDelegate.swift in Sources */,
 				6BCE8C13256B879200461445 /* SceneDelegate.swift in Sources */,
 				6BC466DD257357E00010F5A3 /* LATableCell7.swift in Sources */,
