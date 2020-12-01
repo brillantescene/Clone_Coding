@@ -1,15 +1,19 @@
 //
-//  LATableTitleCell.swift
+//  MainTVCell.swift
 //  AppleMusic
 //
-//  Created by ✨EUGENE✨ on 2020/11/23.
+//  Created by ✨EUGENE✨ on 2020/12/01.
 //
 
 import UIKit
 
-class LATableTitleCell: UITableViewCell {
+class MainTVCell: UITableViewCell {
 
-    static let identifier = "LATableTitleCell"
+    static let identifier = "MainTVCell"
+    
+    @IBOutlet var tableViewTitle: UILabel!
+    @IBOutlet var seeAllBtn: UIButton!
+    @IBOutlet var collectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +25,5 @@ class LATableTitleCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

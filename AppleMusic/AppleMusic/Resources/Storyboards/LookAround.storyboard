@@ -45,7 +45,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="3cb-QZ-Pf3" secondAttribute="bottom" constant="14" id="rnq-hJ-uf4"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="375" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell1" rowHeight="217" id="Au0-Gv-VCx" customClass="LATableCell1" customModule="AppleMusic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="91" width="375" height="217"/>
@@ -150,8 +150,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="무드별 음악" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-3S-kY7">
-                                                    <rect key="frame" x="124" y="11" width="78" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무드별 음악" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-3S-kY7">
+                                                    <rect key="frame" x="24" y="11" width="78" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Bus-lX-U5h"/>
                                                     </constraints>
@@ -162,6 +162,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="afJ-3S-kY7" firstAttribute="top" secondItem="HPb-52-J9F" secondAttribute="top" constant="11" id="bhY-1E-RLf"/>
+                                                <constraint firstItem="afJ-3S-kY7" firstAttribute="leading" secondItem="HPb-52-J9F" secondAttribute="leading" constant="24" id="oXd-22-JMg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -222,14 +223,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인기 트랙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYk-2z-w3d">
-                                                    <rect key="frame" x="64" y="11" width="63" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 트랙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYk-2z-w3d">
+                                                    <rect key="frame" x="24" y="11" width="63" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LYk-2z-w3d" firstAttribute="leading" secondItem="Kro-HE-4m1" secondAttribute="leading" constant="24" id="ggo-wT-7c1"/>
+                                                <constraint firstItem="LYk-2z-w3d" firstAttribute="top" secondItem="Kro-HE-4m1" secondAttribute="top" constant="11" id="xqY-fJ-qO7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell6" rowHeight="525" id="lfz-Wd-vsC" customClass="LATableCell6" customModule="AppleMusic" customModuleProvider="target">
@@ -292,14 +296,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apple Music 라디오" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1H3-yx-d6m">
-                                                    <rect key="frame" x="102" y="11" width="148" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Music 라디오" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1H3-yx-d6m">
+                                                    <rect key="frame" x="24" y="11" width="148" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1H3-yx-d6m" firstAttribute="leading" secondItem="1DJ-1R-LNp" secondAttribute="leading" constant="24" id="KGD-wg-vdI"/>
+                                                <constraint firstItem="1H3-yx-d6m" firstAttribute="top" secondItem="1DJ-1R-LNp" secondAttribute="top" constant="11" id="sKK-cb-7Ql"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell8" rowHeight="282" id="bVo-69-KNw" customClass="LATableCell8" customModule="AppleMusic" customModuleProvider="target">

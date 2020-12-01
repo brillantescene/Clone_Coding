@@ -13,7 +13,10 @@ class LookAroundVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "둘러보기"
         LATableView.dataSource = self
+        
+//        mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
     }
 
 }
