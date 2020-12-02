@@ -14,6 +14,8 @@ class LookAroundVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "둘러보기"
+        let tableViewCellNib = UINib(nibName: "LATVCell1", bundle: nil)
+        self.LATableView.register(tableViewCellNib, forCellWithReuseIdentifier: "LATVCell1")
         LATableView.dataSource = self
         
 //        mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -35,6 +37,8 @@ extension LookAroundVC: UITableViewDataSource {
             }
             return cell
         case 1:
+            
+            
 //            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell1.identifier) as? LATableCell1 else {
 //                return UITableViewCell()
 //            }

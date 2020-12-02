@@ -15,7 +15,6 @@ class LATableCell1: UITableViewCell {
     //    @IBOutlet var cellTitleLabel: UILabel!
     
     let itemSpacing: CGFloat = 8
-        
     let horizonInset: CGFloat = 24
     let rightSpacing: CGFloat = 24
     let lineSpacing: CGFloat = 10
