@@ -10,6 +10,7 @@ import UIKit
 class LATVCell1: UITableViewCell {
 
     static let identifier = "LATVCell1"
+    
     @IBOutlet var collectionView: UICollectionView!
     
     let itemSpacing: CGFloat = 8
@@ -53,7 +54,7 @@ extension LATVCell1: UICollectionViewDataSource {
 extension LATVCell1: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellHeight = collectionView.frame.height
-        let cellWidth = (collectionView.frame.width - horizonInset - rightSpacing) / 2 - 5
+        let cellWidth = (collectionView.frame.width - horizonInset - rightSpacing)
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

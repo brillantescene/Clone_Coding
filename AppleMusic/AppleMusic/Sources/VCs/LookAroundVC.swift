@@ -13,14 +13,24 @@ class LookAroundVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "둘러보기"
-        let tableViewCellNib = UINib(nibName: "LATVCell1", bundle: nil)
-        self.LATableView.register(tableViewCellNib, forCellWithReuseIdentifier: "LATVCell1")
+        
+        self.navigationController?.navigationBar.topItem?.title = "둘러보기"
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        
+        
+        registerXib()
+        
+        
         LATableView.dataSource = self
         
 //        mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
     }
 
+    func registerXib() {
+        let tableViewCellNib = UINib(nibName: "LATVCell1", bundle: nil)
+        LATableView.register(tableViewCellNib, forCellReuseIdentifier: "LATVCell1")
+    }
 }
 extension LookAroundVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,39 +48,24 @@ extension LookAroundVC: UITableViewDataSource {
             return cell
         case 1:
             
-            
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell1.identifier) as? LATableCell1 else {
-//                return UITableViewCell()
-//            }
-            
-            ////
-            let Tablecell = LATableView.dequeueReusableCell(withIdentifier: LATableCell1.identifier, for: indexPath) as! LATableCell1
-
-//                    Tablecell.configureCell() // this is function which setups my collection view
-
-            let collectionCell = Tablecell
-
-            collectionCell.didSelectItemAction = { [weak self] indexPath in
-                    self?.performSegue(withIdentifier: FirstCollectionVC.identifier, sender: self)
-                }
-            collectionCell.setCell()
-                return collectionCell
-            ////
-            //////
-//            let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell1.identifier, for: indexPath)
-//            guard let productsCell = cell as? LATableCell1 else {
-//                return cell
-//            }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATVCell1.identifier) as? LATVCell1 else {
+//                let rowArray = gottaHearArray.objectsArray
+//                cell.updateCellWith(row: rowArray)
+                
+                return UITableViewCell()
+            }
+            cell.setCell()
+            return cell
+//            let Tablecell = LATableView.dequeueReusableCell(withIdentifier: LATableCell1.identifier, for: indexPath) as! LATableCell1
 //
-//            productsCell.didSelectItemAction = { [weak self] indexPath in
-//                self?.performSegue(withIdentifier: FirstCollectionVC.identifier, sender: self)
-//            }
+//            let collectionCell = Tablecell
 //
-//            return productsCell
-            //////
-//
-//            cell.setCell()
-//            return cell
+//            collectionCell.didSelectItemAction = { [weak self] indexPath in
+//                    self?.performSegue(withIdentifier: FirstCollectionVC.identifier, sender: self)
+//                }
+//            collectionCell.setCell()
+//                return collectionCell
+
         
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell2.identifier) as? LATableCell2 else {
@@ -125,7 +120,7 @@ extension LookAroundVC: UITableViewDataSource {
         }
         
     }
-    
+
     
 }
 extension LookAroundVC: UITableViewDelegate {
