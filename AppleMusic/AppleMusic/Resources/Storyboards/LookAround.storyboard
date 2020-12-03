@@ -90,61 +90,8 @@
                                             <outlet property="FirstCollectionView" destination="rhs-kN-ilu" id="DAG-pr-RdA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell2" rowHeight="276" id="WIM-q5-iIr" customClass="LATableCell2" customModule="AppleMusic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="308" width="375" height="276"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIM-q5-iIr" id="aSF-vZ-2Ah">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I8K-QF-fDQ">
-                                                    <rect key="frame" x="0.0" y="43" width="375" height="233"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="225" id="owY-cB-1qP"/>
-                                                    </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OGp-qq-MrK">
-                                                        <size key="itemSize" width="128" height="128"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SecondCollectionCell" id="zmt-5i-dbe" customClass="SecondCollectionCell" customModule="AppleMusic" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="52.666666666666664" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pq5-64-Ow8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                            </collectionViewCellContentView>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                </collectionView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="믿고 들으세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFZ-q1-Oxd">
-                                                    <rect key="frame" x="24" y="11" width="93" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Blf-EI-alw"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="I8K-QF-fDQ" secondAttribute="bottom" id="7Mo-jL-t6q"/>
-                                                <constraint firstItem="nFZ-q1-Oxd" firstAttribute="leading" secondItem="aSF-vZ-2Ah" secondAttribute="leading" constant="24" id="OIL-dC-IPu"/>
-                                                <constraint firstItem="I8K-QF-fDQ" firstAttribute="leading" secondItem="aSF-vZ-2Ah" secondAttribute="leading" id="SqH-2S-7dc"/>
-                                                <constraint firstItem="I8K-QF-fDQ" firstAttribute="top" secondItem="nFZ-q1-Oxd" secondAttribute="bottom" constant="11" id="tIX-ZN-zqJ"/>
-                                                <constraint firstItem="nFZ-q1-Oxd" firstAttribute="top" secondItem="aSF-vZ-2Ah" secondAttribute="top" constant="11" id="uE5-Te-0aF"/>
-                                                <constraint firstAttribute="trailing" secondItem="I8K-QF-fDQ" secondAttribute="trailing" id="ym7-rg-lVX"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="secondCollectionView" destination="I8K-QF-fDQ" id="RqO-yN-URx"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell3" rowHeight="135" id="sN6-Ff-FqV" customClass="LATableCell3" customModule="AppleMusic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="584" width="375" height="135"/>
+                                        <rect key="frame" x="0.0" y="308" width="375" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sN6-Ff-FqV" id="HPb-52-J9F">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
@@ -164,6 +111,14 @@
                                                 <constraint firstItem="afJ-3S-kY7" firstAttribute="top" secondItem="HPb-52-J9F" secondAttribute="top" constant="11" id="bhY-1E-RLf"/>
                                                 <constraint firstItem="afJ-3S-kY7" firstAttribute="leading" secondItem="HPb-52-J9F" secondAttribute="leading" constant="24" id="oXd-22-JMg"/>
                                             </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell2" rowHeight="276" id="WIM-q5-iIr" customClass="LATableCell2" customModule="AppleMusic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="443" width="375" height="276"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIM-q5-iIr" id="aSF-vZ-2Ah">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="276"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LATableCell4" rowHeight="222" id="h9l-dJ-dUb" customClass="LATableCell4" customModule="AppleMusic" customModuleProvider="target">
@@ -445,15 +400,15 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uzI-52-DTq">
-                                        <rect key="frame" x="0.0" y="2152.0000076293945" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="2152.0000076293945" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uzI-52-DTq" id="HsN-jR-DjX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="p7n-fX-I6A">
-                                        <rect key="frame" x="0.0" y="2196.0000076293945" width="375" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="2195.666675567627" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p7n-fX-I6A" id="b8F-ig-0hd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>

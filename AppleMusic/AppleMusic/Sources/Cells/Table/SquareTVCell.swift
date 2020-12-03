@@ -1,30 +1,33 @@
 //
-//  LATableCell2.swift
+//  SquareTVCell.swift
 //  AppleMusic
 //
-//  Created by ✨EUGENE✨ on 2020/11/27.
+//  Created by ✨EUGENE✨ on 2020/12/03.
 //
 
 import UIKit
 
-class LATableCell2: UITableViewCell {
+class SquareTVCell: UITableViewCell {
 
-    static let identifier = "LATableCell2"
+    static let identifier = "SquareTVCell"
     
-    @IBOutlet var secondCollectionView: UICollectionView!
+    @IBOutlet var tableTitleLabel: UILabel!
+    @IBOutlet var collectionView: UICollectionView!
     
-
     let itemSpacing: CGFloat = 8
-    
     let horizonInset: CGFloat = 24
     let rightSpacing: CGFloat = 24
     let lineSpacing: CGFloat = 10
+
     
-    func setCell() {
+    func setCell(title: String) {
+        tableTitleLabel.text = title
+        
         let collectionViewCellNib = UINib(nibName: "SquareCVCell", bundle: nil)
-        secondCollectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: "SquareCVCell")
-        secondCollectionView.dataSource = self
-        secondCollectionView.delegate = self
+        collectionView.register(collectionViewCellNib, forCellWithReuseIdentifier: "SquareCVCell")
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,9 +39,9 @@ class LATableCell2: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
-extension LATableCell2: UICollectionViewDataSource {
+extension SquareTVCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 17
     }
@@ -53,7 +56,7 @@ extension LATableCell2: UICollectionViewDataSource {
     
 }
 
-extension LATableCell2: UICollectionViewDelegateFlowLayout {
+extension SquareTVCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellHeight = collectionView.frame.height
         let cellWidth = (collectionView.frame.width - horizonInset - rightSpacing) / 2 - 5
