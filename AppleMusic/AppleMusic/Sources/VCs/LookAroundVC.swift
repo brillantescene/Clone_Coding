@@ -20,6 +20,10 @@ class LookAroundVC: UIViewController {
     }
 
     func registerXib() {
+        
+        let TitleTVCellNib = UINib(nibName: "TitleTVCell", bundle: nil)
+        LATableView.register(TitleTVCellNib, forCellReuseIdentifier: "TitleTVCell")
+        
         let LATVCell1Nib = UINib(nibName: "LATVCell1", bundle: nil)
         LATableView.register(LATVCell1Nib, forCellReuseIdentifier: "LATVCell1")
         
@@ -41,9 +45,10 @@ extension LookAroundVC: UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableTitleCell.identifier) as? LATableTitleCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTVCell.identifier) as? TitleTVCell else {
                 return UITableViewCell()
             }
+            cell.setCell(title: "둘러보기")
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LATVCell1.identifier) as? LATVCell1 else {
@@ -69,18 +74,18 @@ extension LookAroundVC: UITableViewDataSource {
             }
             cell.setCell(title: "행복한 날")
             return cell
-        case 5:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell5.identifier) as? LATableCell5 else {
-                return UITableViewCell()
-            }
+//        case 5:
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell5.identifier) as? LATableCell5 else {
+//                return UITableViewCell()
+//            }
 //            cell.setCell()
-            return cell
-        case 6:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell6.identifier) as? LATableCell6 else {
-                return UITableViewCell()
-            }
-            cell.setCell()
-            return cell
+//            return cell
+//        case 6:
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell6.identifier) as? LATableCell6 else {
+//                return UITableViewCell()
+//            }
+//            cell.setCell()
+//            return cell
         case 7:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: RectangleTVCell.identifier) as? RectangleTVCell else {
                 return UITableViewCell()
@@ -91,13 +96,13 @@ extension LookAroundVC: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SquareTVCell.identifier) as? SquareTVCell else {
                 return UITableViewCell()
             }
-            cell.setCell(title: "오늘의 TOP 100")
+            cell.setCell(title: "2020년 최고의 노래")
             return cell
         case 9:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell9.identifier) as? LATableCell9 else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SquareTVCell.identifier) as? SquareTVCell else {
                 return UITableViewCell()
             }
-            cell.setCell()
+            cell.setCell(title: "오늘의 TOP 100")
             return cell
         default:
             return UITableViewCell()

@@ -1,16 +1,20 @@
 //
-//  LATableCell7.swift
+//  TitleTVCell.swift
 //  AppleMusic
 //
-//  Created by ✨EUGENE✨ on 2020/11/29.
+//  Created by ✨EUGENE✨ on 2020/12/04.
 //
 
 import UIKit
 
-class LATableCell7: UITableViewCell {
+class TitleTVCell: UITableViewCell {
 
-    static let identifier = "LATableCell7"
+    static let identifier = "TitleTVCell"
+    @IBOutlet var titleLabel: UILabel!
     
+    func setCell(title: String) {
+        titleLabel.text = title
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +25,5 @@ class LATableCell7: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

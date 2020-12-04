@@ -20,33 +20,6 @@
                                 <rect key="frame" x="0.0" y="138" width="375" height="640"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LATableTitleCell" rowHeight="63" id="nCb-yU-oMi" customClass="LATableTitleCell" customModule="AppleMusic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="63"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nCb-yU-oMi" id="W7h-xW-T6g">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="둘러보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cb-QZ-Pf3">
-                                                    <rect key="frame" x="24" y="13" width="104" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="HCq-PY-fnx"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="3cb-QZ-Pf3" firstAttribute="top" secondItem="W7h-xW-T6g" secondAttribute="top" constant="13" id="7Qn-Ry-4Dg"/>
-                                                <constraint firstItem="3cb-QZ-Pf3" firstAttribute="leading" secondItem="W7h-xW-T6g" secondAttribute="leading" constant="24" id="8f6-2L-RCh"/>
-                                                <constraint firstAttribute="bottom" secondItem="3cb-QZ-Pf3" secondAttribute="bottom" constant="14" id="rnq-hJ-uf4"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                                    </tableViewCell>
-                                </prototypes>
                                 <sections/>
                             </tableView>
                         </subviews>
