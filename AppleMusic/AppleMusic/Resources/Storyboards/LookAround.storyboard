@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,11 +33,38 @@
                                             <constraint firstAttribute="width" secondItem="JjH-fY-ZLb" secondAttribute="height" multiplier="1:1" id="gMk-cU-H9H"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Paper Hearts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qw-MU-fRN">
+                                        <rect key="frame" x="100" y="22" width="145" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MN-SY-dOr">
+                                        <rect key="frame" x="319.66666666666669" y="22" width="31.333333333333314" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="forward.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-uO-hyW">
+                                        <rect key="frame" x="274.66666666666669" y="22" width="15" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstItem="2Qw-MU-fRN" firstAttribute="leading" secondItem="JjH-fY-ZLb" secondAttribute="trailing" constant="24" id="3uE-fX-RpD"/>
+                                    <constraint firstItem="9MN-SY-dOr" firstAttribute="leading" secondItem="W8i-uO-hyW" secondAttribute="trailing" constant="30" id="5fw-tN-deG"/>
+                                    <constraint firstItem="9MN-SY-dOr" firstAttribute="top" secondItem="YdL-X3-EbS" secondAttribute="top" constant="22" id="6nN-ZR-hSd"/>
+                                    <constraint firstAttribute="bottom" secondItem="W8i-uO-hyW" secondAttribute="bottom" constant="23" id="ETZ-cs-IZX"/>
+                                    <constraint firstItem="W8i-uO-hyW" firstAttribute="top" secondItem="YdL-X3-EbS" secondAttribute="top" constant="22" id="HbX-HV-iVr"/>
+                                    <constraint firstItem="2Qw-MU-fRN" firstAttribute="top" secondItem="YdL-X3-EbS" secondAttribute="top" constant="22" id="OzV-Vc-fqU"/>
                                     <constraint firstAttribute="bottom" secondItem="JjH-fY-ZLb" secondAttribute="bottom" constant="8" id="PaC-vP-BIY"/>
+                                    <constraint firstAttribute="trailing" secondItem="9MN-SY-dOr" secondAttribute="trailing" constant="24" id="XYd-F6-h4n"/>
+                                    <constraint firstAttribute="bottom" secondItem="9MN-SY-dOr" secondAttribute="bottom" constant="23" id="ehe-DV-VLG"/>
                                     <constraint firstItem="JjH-fY-ZLb" firstAttribute="leading" secondItem="YdL-X3-EbS" secondAttribute="leading" constant="24" id="htG-Bi-lU5"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Qw-MU-fRN" secondAttribute="bottom" constant="22" id="jEI-zy-6vM"/>
                                     <constraint firstItem="JjH-fY-ZLb" firstAttribute="top" secondItem="YdL-X3-EbS" secondAttribute="top" constant="8" id="sYE-DP-vlV"/>
                                 </constraints>
                             </view>
@@ -54,6 +82,10 @@
                     <connections>
                         <outlet property="LATableView" destination="Jzm-NC-t3F" id="J50-gx-M4U"/>
                         <outlet property="albumImageView" destination="JjH-fY-ZLb" id="eOG-7M-qq1"/>
+                        <outlet property="nextBtn" destination="9MN-SY-dOr" id="2ov-xQ-HAb"/>
+                        <outlet property="playBtn" destination="W8i-uO-hyW" id="Yka-pF-hFy"/>
+                        <outlet property="playSongNameLabel" destination="2Qw-MU-fRN" id="YAy-y3-v1U"/>
+                        <outlet property="playingView" destination="YdL-X3-EbS" id="SvZ-4e-360"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4b6-Sm-ice" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -84,6 +116,8 @@
     </scenes>
     <resources>
         <image name="600x600SC.DN01" width="600" height="600"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

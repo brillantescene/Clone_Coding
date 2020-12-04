@@ -10,22 +10,32 @@ import UIKit
 class LookAroundVC: UIViewController {
 
     @IBOutlet var LATableView: UITableView!
+    @IBOutlet var playingView: UIView!
     @IBOutlet var albumImageView: UIImageView!
+    @IBOutlet var playSongNameLabel: UILabel!
+    @IBOutlet var playBtn: UIButton!
+    @IBOutlet var nextBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = "둘러보기"
         registerXib()
-        albumImage()
+        playing()
         LATableView.dataSource = self
     }
 
-    func albumImage() {
+    func playing() {
+        playingView.backgroundColor = UIColor(displayP3Red: 248/255, green: 248/255, blue: 255/255, alpha: 0.9)
         albumImageView.layer.cornerRadius = 4
         albumImageView.layer.shadowOpacity = 0.1
         albumImageView.layer.shadowOffset = CGSize(width: 0, height: 3)
         albumImageView.layer.shadowRadius = 3
+        playBtn.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
+        playBtn.tintColor = UIColor(ciColor: .black)
+        nextBtn.setImage(UIImage(systemName: "forward.fill"), for: UIControl.State.normal)
+        nextBtn.tintColor = UIColor(ciColor: .black)
     }
     func registerXib() {
         
