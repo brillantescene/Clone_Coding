@@ -12,13 +12,14 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBar()
-        // Do any additional setup after loading the view.
+        
     }
+    
     func setTabBar() {
         
         self.tabBar.tintColor = UIColor.systemPink
+
         
-      
         //3
         let LookAround = UIStoryboard.init(name: "LookAround", bundle: nil)
         guard let thirdTab = LookAround.instantiateViewController(identifier: "LookAroundVC")
@@ -33,7 +34,7 @@ class TabBarVC: UITabBarController {
         
         let tabs =  [thirdTab]
         
-//        tabBar.layer.opacity = 0.7
+        
 //        tabBar.layer.shadowOpacity = 0.1
 //        tabBar.layer.shadowOffset = CGSize(width: 0, height: -3)
 //        tabBar.layer.shadowRadius = 3

@@ -15,16 +15,8 @@ class LookAroundVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = "둘러보기"
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
-//        self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
-        
-        
         registerXib()
-        
-        
         LATableView.dataSource = self
-        
-//        mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
     }
 
     func registerXib() {
@@ -34,6 +26,8 @@ class LookAroundVC: UIViewController {
         let SquareTVCellNib = UINib(nibName: "SquareTVCell", bundle: nil)
         LATableView.register(SquareTVCellNib, forCellReuseIdentifier: "SquareTVCell")
         
+        let RectangleTVCellNib = UINib(nibName: "RectangleTVCell", bundle: nil)
+        LATableView.register(RectangleTVCellNib, forCellReuseIdentifier: "RectangleTVCell")
         
     }
 }
@@ -52,37 +46,22 @@ extension LookAroundVC: UITableViewDataSource {
             }
             return cell
         case 1:
-            
             guard let cell = tableView.dequeueReusableCell(withIdentifier: LATVCell1.identifier) as? LATVCell1 else {
-//                let rowArray = gottaHearArray.objectsArray
-//                cell.updateCellWith(row: rowArray)
-                
                 return UITableViewCell()
             }
             cell.setCell()
             return cell
-//            let Tablecell = LATableView.dequeueReusableCell(withIdentifier: LATableCell1.identifier, for: indexPath) as! LATableCell1
-//
-//            let collectionCell = Tablecell
-//
-//            collectionCell.didSelectItemAction = { [weak self] indexPath in
-//                    self?.performSegue(withIdentifier: FirstCollectionVC.identifier, sender: self)
-//                }
-//            collectionCell.setCell()
-//                return collectionCell
-
-        
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SquareTVCell.identifier) as? SquareTVCell else {
                 return UITableViewCell()
             }
-            cell.setCell(title: "이번 주의 신곡")
+            cell.setCell(title: "믿고 들으세요")
             return cell
         case 3:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell3.identifier) as? LATableCell3 else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: RectangleTVCell.identifier) as? RectangleTVCell else {
                 return UITableViewCell()
             }
-//            cell.setCell()
+            cell.setCell(title: "무드별 음악")
             return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SquareTVCell.identifier) as? SquareTVCell else {
@@ -103,10 +82,10 @@ extension LookAroundVC: UITableViewDataSource {
             cell.setCell()
             return cell
         case 7:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: LATableCell7.identifier) as? LATableCell7 else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: RectangleTVCell.identifier) as? RectangleTVCell else {
                 return UITableViewCell()
             }
-//            cell.setCell()
+            cell.setCell(title: "Apple Music 라디오")
             return cell
         case 8:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SquareTVCell.identifier) as? SquareTVCell else {
@@ -123,10 +102,7 @@ extension LookAroundVC: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
-        
     }
-
-    
 }
 extension LookAroundVC: UITableViewDelegate {
     
