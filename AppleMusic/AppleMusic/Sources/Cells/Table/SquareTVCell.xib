@@ -18,11 +18,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="믿고 들으세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmD-ii-ITp">
-                        <rect key="frame" x="24" y="11" width="98" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="O3V-me-5zO"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <rect key="frame" x="24" y="11" width="103" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -40,18 +37,17 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zj3-YB-h74">
-                        <rect key="frame" x="295" y="13" width="56" height="19"/>
+                        <rect key="frame" x="291" y="12" width="60" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="19" id="ErB-kk-LPe"/>
+                            <constraint firstAttribute="height" constant="20" id="ErB-kk-LPe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <state key="normal" title="전체 보기">
                             <color key="titleColor" systemColor="systemPinkColor"/>
                         </state>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Zj3-YB-h74" firstAttribute="bottom" secondItem="nmD-ii-ITp" secondAttribute="bottom" id="3f9-rP-jVy"/>
                     <constraint firstAttribute="bottom" secondItem="51n-oc-4K0" secondAttribute="bottom" constant="21" id="854-RL-qb9"/>
                     <constraint firstItem="nmD-ii-ITp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="L1g-6i-EFl"/>
                     <constraint firstAttribute="trailing" secondItem="51n-oc-4K0" secondAttribute="trailing" id="MA8-gj-iwc"/>
@@ -59,6 +55,7 @@
                     <constraint firstItem="51n-oc-4K0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="akC-JO-KaH"/>
                     <constraint firstAttribute="trailing" secondItem="Zj3-YB-h74" secondAttribute="trailing" constant="24" id="pWF-4E-7VZ"/>
                     <constraint firstItem="51n-oc-4K0" firstAttribute="top" secondItem="nmD-ii-ITp" secondAttribute="bottom" constant="11" id="yXt-TS-7I3"/>
+                    <constraint firstItem="Zj3-YB-h74" firstAttribute="bottom" secondItem="nmD-ii-ITp" secondAttribute="bottom" id="yuA-Bg-oQ8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -10,15 +10,23 @@ import UIKit
 class LookAroundVC: UIViewController {
 
     @IBOutlet var LATableView: UITableView!
+    @IBOutlet var albumImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = "둘러보기"
         registerXib()
+        albumImage()
         LATableView.dataSource = self
     }
 
+    func albumImage() {
+        albumImageView.layer.cornerRadius = 4
+        albumImageView.layer.shadowOpacity = 0.1
+        albumImageView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        albumImageView.layer.shadowRadius = 3
+    }
     func registerXib() {
         
         let TitleTVCellNib = UINib(nibName: "TitleTVCell", bundle: nil)
