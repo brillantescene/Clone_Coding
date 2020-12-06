@@ -33,25 +33,31 @@
                             <color key="titleColor" systemColor="systemPinkColor"/>
                         </state>
                     </button>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Jq-eD-H4Z">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="P0W-SQ-Whh">
                         <rect key="frame" x="0.0" y="45" width="320" height="188"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </tableView>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nea-wk-zcl">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="SG0-eP-qbG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="2Vh-ar-CgW"/>
                     <constraint firstItem="SG0-eP-qbG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="CPZ-Zu-XBt"/>
+                    <constraint firstItem="P0W-SQ-Whh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I7y-n2-M6N"/>
                     <constraint firstItem="qV8-BF-LEv" firstAttribute="bottom" secondItem="SG0-eP-qbG" secondAttribute="bottom" id="KKj-23-qdJ"/>
-                    <constraint firstItem="7Jq-eD-H4Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Yuv-Xg-ZI2"/>
-                    <constraint firstAttribute="bottom" secondItem="7Jq-eD-H4Z" secondAttribute="bottom" id="akV-rU-oTN"/>
+                    <constraint firstAttribute="trailing" secondItem="P0W-SQ-Whh" secondAttribute="trailing" id="Lrb-QW-7HC"/>
+                    <constraint firstItem="P0W-SQ-Whh" firstAttribute="top" secondItem="SG0-eP-qbG" secondAttribute="bottom" constant="11" id="MBa-FH-xy4"/>
                     <constraint firstAttribute="trailing" secondItem="qV8-BF-LEv" secondAttribute="trailing" constant="24" id="gWX-hj-aXH"/>
-                    <constraint firstAttribute="trailing" secondItem="7Jq-eD-H4Z" secondAttribute="trailing" id="qot-zg-jSR"/>
-                    <constraint firstItem="7Jq-eD-H4Z" firstAttribute="top" secondItem="SG0-eP-qbG" secondAttribute="bottom" constant="11" id="s7N-pL-Yxr"/>
+                    <constraint firstAttribute="bottom" secondItem="P0W-SQ-Whh" secondAttribute="bottom" id="ulY-Cd-fAt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="tableView" destination="7Jq-eD-H4Z" id="b9D-c1-sQn"/>
+                <outlet property="collectionView" destination="P0W-SQ-Whh" id="c4A-aX-jcx"/>
             </connections>
             <point key="canvasLocation" x="-23.188405797101453" y="142.96875"/>
         </tableViewCell>
