@@ -9,6 +9,10 @@ import UIKit
 
 class TableinTableTVCell: UITableViewCell {
 
+    static let identifier = "TableinTableTVCell"
+    func setCell() {
+        
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
