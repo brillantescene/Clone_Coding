@@ -22,6 +22,10 @@ class HomeViewController: UIViewController {
         setItemData()
         itemTableView.dataSource = self
         itemTableView.delegate = self
+        
+        let TableCellNib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+        itemTableView.register(TableCellNib, forCellReuseIdentifier: "HomeTableViewCell")
+        
         plusButton.layer.shadowOpacity = 0.2
         plusButton.layer.shadowRadius = 3
         plusButton.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -48,7 +52,7 @@ extension HomeViewController: UITableViewDataSource {
         return items.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemListCell.identifier) as? ItemListCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else { return UITableViewCell() }
         cell.setCell(item: items[indexPath.row]) //rank: indexPath.row,
         return cell
     }
@@ -56,30 +60,13 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        
+
         let selectItem = items[indexPath.row]
-        
+
         if let nextVC = self.storyboard?.instantiateViewController(identifier: "ItemDetailVC") as? ItemDetailVC {
             nextVC.item = selectItem
             self.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
 }
-//extension HomeViewController: UIScrollViewDelegate {
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        UIView.animate(withDuration: 0.5, animations: {
-//            self.topViewHeightConstraint.constant = 62
-//            self.rootView.layoutIfNeeded()
-//        })
-//    }
-//
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        if (decelerate) {
-//            UIView.animate(withDuration: 0.5, animations: {
-//                self.topViewHeightConstraint.constant = 0
-//                self.rootView.layoutIfNeeded()
-//            })
-//        }
-//    }
-//}
-//
+

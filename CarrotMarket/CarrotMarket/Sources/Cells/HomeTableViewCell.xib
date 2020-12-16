@@ -1,21 +1,91 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="CarrotMarket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="143"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="407" height="143"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ag1-Bx-CBK">
+                        <rect key="frame" x="14" y="14" width="110" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ag1-Bx-CBK" secondAttribute="height" multiplier="1:1" id="ETI-pM-sPm"/>
+                            <constraint firstAttribute="height" constant="110" id="RTg-VK-Miw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동네" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTc-ay-3WV">
+                        <rect key="frame" x="139" y="40.5" width="22.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yb-8y-7Mc">
+                        <rect key="frame" x="166" y="39" width="4" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-qh-LIO">
+                        <rect key="frame" x="139" y="60.5" width="22.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPF-uR-NbH">
+                        <rect key="frame" x="139" y="16" width="252" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veN-7f-D48">
+                        <rect key="frame" x="174" y="40.5" width="23" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yPF-uR-NbH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="6cq-YU-0K3"/>
+                    <constraint firstItem="yPF-uR-NbH" firstAttribute="leading" secondItem="Ag1-Bx-CBK" secondAttribute="trailing" constant="15" id="HI5-O7-d6R"/>
+                    <constraint firstAttribute="bottom" secondItem="Ag1-Bx-CBK" secondAttribute="bottom" constant="14" id="Ovc-eM-700"/>
+                    <constraint firstItem="2yb-8y-7Mc" firstAttribute="leading" secondItem="OTc-ay-3WV" secondAttribute="trailing" constant="4.3333333333333428" id="QwJ-Do-5Kb"/>
+                    <constraint firstAttribute="trailing" secondItem="yPF-uR-NbH" secondAttribute="trailing" constant="16" id="ZyN-of-2VO"/>
+                    <constraint firstItem="veN-7f-D48" firstAttribute="leading" secondItem="2yb-8y-7Mc" secondAttribute="trailing" constant="4" id="aAQ-5I-sAN"/>
+                    <constraint firstItem="OTc-ay-3WV" firstAttribute="leading" secondItem="Ag1-Bx-CBK" secondAttribute="trailing" constant="15" id="iV4-Ye-viV"/>
+                    <constraint firstItem="Ag1-Bx-CBK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="jDk-ox-Ncg"/>
+                    <constraint firstItem="OTc-ay-3WV" firstAttribute="top" secondItem="yPF-uR-NbH" secondAttribute="bottom" constant="3.9999999999998437" id="m7c-3Y-jOd"/>
+                    <constraint firstItem="2yb-8y-7Mc" firstAttribute="top" secondItem="yPF-uR-NbH" secondAttribute="bottom" constant="2.3333333333333286" id="rPv-zb-daJ"/>
+                    <constraint firstItem="veN-7f-D48" firstAttribute="top" secondItem="yPF-uR-NbH" secondAttribute="bottom" constant="4.0000000000000711" id="t3c-PG-vzR"/>
+                    <constraint firstItem="0ze-qh-LIO" firstAttribute="leading" secondItem="Ag1-Bx-CBK" secondAttribute="trailing" constant="15" id="tSt-Av-cye"/>
+                    <constraint firstItem="0ze-qh-LIO" firstAttribute="top" secondItem="OTc-ay-3WV" secondAttribute="bottom" constant="4" id="vZb-Js-dRs"/>
+                    <constraint firstItem="Ag1-Bx-CBK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="ybB-8U-lni"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="itemImageView" destination="Ag1-Bx-CBK" id="t8U-1r-osu"/>
+                <outlet property="locationLabel" destination="OTc-ay-3WV" id="D8O-mu-Sjb"/>
+                <outlet property="priceLabel" destination="0ze-qh-LIO" id="Ks7-ca-lCj"/>
+                <outlet property="timeLabel" destination="veN-7f-D48" id="Opn-Eb-WCN"/>
+                <outlet property="titleLabel" destination="yPF-uR-NbH" id="TXt-Ww-JAf"/>
+            </connections>
+            <point key="canvasLocation" x="200.72463768115944" y="91.40625"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
