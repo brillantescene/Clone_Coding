@@ -9,7 +9,7 @@ import UIKit
 
 class ItemDetailVC: UIViewController {
     
-//    static let identifier = "ItemDetailVC"
+    static let identifier = "ItemDetailVC"
     
     @IBOutlet var itemDetailTableView: UITableView!
     

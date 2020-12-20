@@ -63,10 +63,12 @@ extension HomeViewController: UITableViewDelegate {
 
         let selectItem = items[indexPath.row]
 
-        if let nextVC = self.storyboard?.instantiateViewController(identifier: "ItemDetailVC") as? ItemDetailVC {
+        if let nextVC = storyboard?.instantiateViewController(identifier: "ItemDetailVC") as? ItemDetailVC {
             nextVC.item = selectItem
-            self.navigationController?.pushViewController(nextVC, animated: true)
+            navigationController?.pushViewController(nextVC, animated: true)
         }
     }
+    
+    
 }
 
